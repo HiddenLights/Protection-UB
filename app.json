@@ -1,0 +1,34 @@
+{
+    "name": "Protection-UB",
+    "description": "Anti Spam/NSFW/service  Telegram UB Written In Python With Pyrogram.",
+    "repository": "https://github.com/szsupunma/Protection-UB",
+    "logo": "https://telegra.ph/file/f99967e0990714557b19f.jpg",
+    "keywords": [
+    "python3",
+    "telegram",
+    "pyrogram"
+    ],
+    "stack": "container",
+    "env": {
+        "SESSION_STRING": {
+            "description": "string session for UB",
+            "required": true
+        },
+        "API_ID": {
+            "description": "get it fro my.telegram.org",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "get it fro my.telegram.org. ",
+            "required": true
+        },
+        "ARQ_API_KEY": {
+            "description": "Get this from @ARQRobot.",
+            "required": true
+        },
+        "USERBOT_PREFIX": {
+            "description": "UB command here",
+            "required": true
+        }
+    }
+}
