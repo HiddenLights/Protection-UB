@@ -17,7 +17,6 @@ arq = ARQ(ARQ_API_URL, ARQ_API_KEY, aiohttpsession)
 USERBOT_PREFIX = USERBOT_PREFIX
 
 async def main():
-    async with app:
         try:
             await app.join_chat("szteambots")
         except UserAlreadyParticipant:
@@ -26,6 +25,7 @@ async def main():
             print(e)
             pass
 app.run(main())
+app.start()
 
 async def eor(msg: Message, **kwargs):
     func = (
