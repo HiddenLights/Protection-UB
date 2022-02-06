@@ -16,7 +16,6 @@ arq = ARQ(ARQ_API_URL, ARQ_API_KEY, aiohttpsession)
 
 USERBOT_PREFIX = USERBOT_PREFIX
 
-app.start()
 async def main():
     async with app:
         try:
