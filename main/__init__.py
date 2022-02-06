@@ -11,6 +11,7 @@ app = Client(
         API_ID,
         API_HASH 
         )
+app.start()
 aiohttpsession = ClientSession()        
 arq = ARQ(ARQ_API_URL, ARQ_API_KEY, aiohttpsession)
 
@@ -25,7 +26,6 @@ async def main():
             print(e)
             pass
 app.run(main())
-app.start()
 
 async def eor(msg: Message, **kwargs):
     func = (
