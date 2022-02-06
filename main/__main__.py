@@ -2,7 +2,7 @@ from os import remove
 from pyrogram import filters
 from pyrogram import filters
 from pyrogram.types import Message
-from rose import eor, app, arq, USERBOT_PREFIX
+from main import eor, app, arq, USERBOT_PREFIX
 
 
 ns_active_chats = []
