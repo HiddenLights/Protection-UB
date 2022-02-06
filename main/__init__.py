@@ -1,4 +1,4 @@
-from pyrogram import Client,idle
+from pyrogram import Client
 from sample_config import *
 from pyrogram.errors import UserAlreadyParticipant
 from Python_ARQ import ARQ
@@ -27,14 +27,6 @@ async def main():
             pass
 app.run(main())
 
-s = app.get_me()
-
-USERBOT_ID = s.id
-USERBOT_NAME = s.first_name + (s.last_name or "")
-USERBOT_USERNAME = s.username
-USERBOT_MENTION = s.mention
-USERBOT_DC_ID = s.dc_id
-
 async def eor(msg: Message, **kwargs):
     func = (
         (msg.edit_text if msg.from_user.is_self else msg.reply)
@@ -43,7 +35,3 @@ async def eor(msg: Message, **kwargs):
     )
     spec = getfullargspec(func.__wrapped__).args
     return await func(**{k: v for k, v in kwargs.items() if k in spec})
-
-idle()
-print("\n\nBot Stopped, Join @szteambots!")
-app.stop()
